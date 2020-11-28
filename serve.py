@@ -68,7 +68,7 @@ def json_to_num_array(data):
 def eval_model(data):
     X =  np.array([data])
     print(X)
-    return {"prediction": model.predict(X)[0]}
+    return {"prediction": int(model.predict(X)[0])}
 
 @app.route('/')
 def hello_world():
